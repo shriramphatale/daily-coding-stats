@@ -1,0 +1,36 @@
+{
+  "name": "daily-coding-stats",
+  "displayName": "Daily Coding Stats",
+  "description": "Track characters, words, and lines written each day in real time. View daily statistics and trends in a clean dashboard.",
+  "version": "1.0.0",
+  "publisher": "daily-coding-stats",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "dailyCodingStats.showDashboard",
+        "title": "Daily Coding Stats: Show Dashboard"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "npx -y @vscode/vsce package --no-dependencies"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3"
+  }
+}
